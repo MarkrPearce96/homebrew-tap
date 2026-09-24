@@ -1,6 +1,6 @@
 cask "dock-for-google" do
-  version "1.1.0"
-  sha256 "b8115c3e4831031288d7b628104807ccbe61d0d7b0f58339497ba580b824abd7"
+  version "1.2.0"
+  sha256 "1d3b2ec444c85595d656c2d2f3a75d7ccea94164f2d8e8be8fdfb4c22f6645e1"
 
   url "https://github.com/MarkrPearce96/Dock-for-Google/releases/download/v#{version}/Dock-for-Google-#{version}.zip"
   name "Dock for Google"
