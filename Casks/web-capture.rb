@@ -1,6 +1,6 @@
 cask "web-capture" do
-  version "1.0.2"
-  sha256 "53b2e13fa350ab7fb70a1cd21d642d370dae44c1e5a7184438c35e807b53a852"
+  version "1.0.3"
+  sha256 "e2839f467bf19220e50e9ee8631cc6ec943c91bda8a53c2f11a9c9913ed7f4ff"
 
   url "https://github.com/MarkrPearce96/Web-Capture/releases/download/v#{version}/WebCapture.zip"
   name "Web Capture"
@@ -27,11 +27,12 @@ cask "web-capture" do
   ]
 
   caveats <<~EOS
-    Web Capture is unsigned (personal use, not notarized). On first launch:
-      1. Open it once (double-click or right-click > Open). If Gatekeeper
-         blocks it, go to System Settings > Privacy & Security, scroll
-         down, and click "Open Anyway" next to the Web Capture warning
-         (only needed once).
+    Web Capture is signed with a personal Apple Development certificate but
+    not notarized (personal use). On first launch:
+      1. Open it once. If Gatekeeper blocks it, go to System Settings >
+         Privacy & Security, scroll down, and click "Open Anyway" next to
+         the Web Capture warning (only needed once). Right-click > Open
+         does not reliably bypass this on current macOS.
       2. In Safari: Settings > Advanced > check "Show Develop menu",
          then Develop > "Allow Unsigned Extensions" (resets each time
          Safari fully quits).
