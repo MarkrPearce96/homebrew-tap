@@ -16,6 +16,7 @@ cask "web-capture" do
     "~/Library/Application Scripts/com.markpearce.WebCapture",
     "~/Library/Application Scripts/com.markpearce.WebCapture.Extension",
     "~/Library/Caches/com.markpearce.WebCapture",
+    "~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.markpearce.WebCapture.Extension (UNSIGNED)",
     "~/Library/Containers/com.markpearce.WebCapture",
     "~/Library/Containers/com.markpearce.WebCapture.Extension",
     "~/Library/HTTPStorages/com.markpearce.WebCapture",
@@ -45,10 +46,13 @@ cask "web-capture" do
     --zap. Granting your terminal app Full Disk Access (System Settings >
     Privacy & Security > Full Disk Access) before running --zap fixes
     this (confirmed) — re-run brew uninstall --zap web-capture afterward
-    and those folders are removed too. --zap also does not remove
-    Safari's own record of the extension, at
-    ~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.markpearce.WebCapture.Extension (UNSIGNED)/
-    — confirmed this persists even after a full uninstall, so remove it
-    by hand if you want Safari to fully forget the extension.
+    and those folders are removed too. --zap also attempts to remove
+    Safari's own record of the extension (a folder Safari keeps inside
+    its own container, confirmed to otherwise persist even after a full
+    uninstall) — this reaches into another app's sandboxed data, so it
+    may hit the same "Operation not permitted" restriction as the
+    Containers folders above and require the same Full Disk Access fix,
+    or it may just silently fail to remove it; check for yourself if it
+    matters to you.
   EOS
 end
