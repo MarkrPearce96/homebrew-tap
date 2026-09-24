@@ -35,9 +35,8 @@ cask "dock-for-google" do
     container data (preferences, caches, and other state all live inside
     the container, not in the classic top-level Library folders). macOS
     itself protects sandbox container metadata from deletion by ordinary
-    processes (even a plain
-    `rm -rf` in Terminal fails with "Operation not permitted" on
-    .com.apple.containermanagerd.metadata.plist), so
+    processes (even a plain `rm -rf` in Terminal fails with "Operation not
+    permitted" on .com.apple.containermanagerd.metadata.plist), so
     ~/Library/Containers/com.mark.Dock-for-Google(.Extension) may survive
     --zap. Granting your terminal app Full Disk Access (System Settings >
     Privacy & Security > Full Disk Access) before running --zap fixes
