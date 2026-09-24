@@ -45,8 +45,10 @@ cask "web-capture" do
     --zap. Granting your terminal app Full Disk Access (System Settings >
     Privacy & Security > Full Disk Access) before running --zap fixes
     this (confirmed) — re-run brew uninstall --zap web-capture afterward
-    and those folders are removed too. It also does not remove
-    Safari's own record that the extension was once installed — Safari
-    drops that on its own once the app is gone.
+    and those folders are removed too. --zap also does not remove
+    Safari's own record of the extension, at
+    ~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.markpearce.WebCapture.Extension (UNSIGNED)/
+    — confirmed this persists even after a full uninstall, so remove it
+    by hand if you want Safari to fully forget the extension.
   EOS
 end
