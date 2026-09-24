@@ -15,15 +15,9 @@ cask "dock-for-google" do
   zap trash: [
     "~/Library/Application Scripts/com.mark.Dock-for-Google",
     "~/Library/Application Scripts/com.mark.Dock-for-Google.Extension",
-    "~/Library/Caches/com.mark.Dock-for-Google",
     "~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.mark.Dock-for-Google.Extension (UNSIGNED)",
     "~/Library/Containers/com.mark.Dock-for-Google",
     "~/Library/Containers/com.mark.Dock-for-Google.Extension",
-    "~/Library/HTTPStorages/com.mark.Dock-for-Google",
-    "~/Library/Preferences/com.mark.Dock-for-Google.Extension.plist",
-    "~/Library/Preferences/com.mark.Dock-for-Google.plist",
-    "~/Library/Saved Application State/com.mark.Dock-for-Google.savedState",
-    "~/Library/WebKit/com.mark.Dock-for-Google",
   ]
 
   caveats <<~EOS
@@ -37,9 +31,11 @@ cask "dock-for-google" do
          Safari's Developer settings (resets each time Safari fully quits).
       3. Enable the extension in Safari > Settings > Extensions.
 
-    `brew uninstall --zap dock-for-google` removes the app, its helper
-    folders, preferences, and caches. macOS itself protects sandbox
-    container metadata from deletion by ordinary processes (even a plain
+    `brew uninstall --zap dock-for-google` removes the app and its sandboxed
+    container data (preferences, caches, and other state all live inside
+    the container, not in the classic top-level Library folders). macOS
+    itself protects sandbox container metadata from deletion by ordinary
+    processes (even a plain
     `rm -rf` in Terminal fails with "Operation not permitted" on
     .com.apple.containermanagerd.metadata.plist), so
     ~/Library/Containers/com.mark.Dock-for-Google(.Extension) may survive
