@@ -1,6 +1,6 @@
 cask "web-capture" do
   version "1.0.0"
-  sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+  sha256 "47c8df9eac86667d5e194088ed2178e9709145b524598cd62abdb7e90e68a937"
 
   url "https://github.com/MarkrPearce96/Web-Capture/releases/download/v#{version}/WebCapture.zip"
   name "Web Capture"
