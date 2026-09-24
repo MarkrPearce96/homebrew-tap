@@ -43,8 +43,9 @@ cask "web-capture" do
     .com.apple.containermanagerd.metadata.plist), so
     ~/Library/Containers/com.markpearce.WebCapture(.Extension) may survive
     --zap. Granting your terminal app Full Disk Access (System Settings >
-    Privacy & Security > Full Disk Access) before running --zap is the
-    standard fix for this class of restriction. It also does not remove
+    Privacy & Security > Full Disk Access) before running --zap fixes
+    this (confirmed) — re-run brew uninstall --zap web-capture afterward
+    and those folders are removed too. It also does not remove
     Safari's own record that the extension was once installed — Safari
     drops that on its own once the app is gone.
   EOS
