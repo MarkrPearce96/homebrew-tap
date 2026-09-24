@@ -16,4 +16,5 @@ per-Mac step.
 
 ## Casks
 
+- **dock-for-google** — [Dock for Google](https://github.com/MarkrPearce96/Dock-for-Google), a searchable grid launcher for Google web apps in Safari.
 - **web-capture** — [Web Capture](https://github.com/MarkrPearce96/Web-Capture), a Safari full-page screenshot and annotation extension.
