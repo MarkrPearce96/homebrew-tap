@@ -25,8 +25,10 @@ cask "web-capture" do
 
   caveats <<~EOS
     Web Capture is unsigned (personal use, not notarized). On first launch:
-      1. Right-click "Web Capture" in Applications and choose "Open" to
-         bypass Gatekeeper (only needed once).
+      1. Open it once (double-click or right-click > Open). If Gatekeeper
+         blocks it, go to System Settings > Privacy & Security, scroll
+         down, and click "Open Anyway" next to the Web Capture warning
+         (only needed once).
       2. In Safari: Settings > Advanced > check "Show Develop menu",
          then Develop > "Allow Unsigned Extensions" (resets each time
          Safari fully quits).
