@@ -16,7 +16,7 @@ cask "web-capture" do
     "~/Library/Application Scripts/com.markpearce.WebCapture",
     "~/Library/Application Scripts/com.markpearce.WebCapture.Extension",
     "~/Library/Caches/com.markpearce.WebCapture",
-    "~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.markpearce.WebCapture.Extension (UNSIGNED)",
+    "~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.markpearce.WebCapture.Extension (62P4GYN8E3)",
     "~/Library/Containers/com.markpearce.WebCapture",
     "~/Library/Containers/com.markpearce.WebCapture.Extension",
     "~/Library/HTTPStorages/com.markpearce.WebCapture",

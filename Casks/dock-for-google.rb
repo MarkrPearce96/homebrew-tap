@@ -15,13 +15,14 @@ cask "dock-for-google" do
   zap trash: [
     "~/Library/Application Scripts/com.mark.Dock-for-Google",
     "~/Library/Application Scripts/com.mark.Dock-for-Google.Extension",
-    "~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.mark.Dock-for-Google.Extension (UNSIGNED)",
+    "~/Library/Containers/com.apple.Safari/Data/Library/WebKit/WebExtensions/Default/com.mark.Dock-for-Google.Extension (62P4GYN8E3)",
     "~/Library/Containers/com.mark.Dock-for-Google",
     "~/Library/Containers/com.mark.Dock-for-Google.Extension",
   ]
 
   caveats <<~EOS
-    Dock for Google is unsigned (personal use, not notarized). On first launch:
+    Dock for Google is signed with a personal Apple Development certificate
+    but not notarized (personal use). On first launch:
       1. Open it once. If Gatekeeper blocks it, go to System Settings >
          Privacy & Security, scroll down, and click "Open Anyway" next to
          the warning (only needed once). Right-click > Open does not
