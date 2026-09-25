@@ -17,4 +17,5 @@ per-Mac step.
 ## Casks
 
 - **dock-for-google** — [Dock for Google](https://github.com/MarkrPearce96/Dock-for-Google), a searchable grid launcher for Google web apps in Safari.
+- **polytype** — [Polytype](https://github.com/MarkrPearce96/Polytype), a menu-bar app that translates text in place with a global hotkey (arm64 only).
 - **web-capture** — [Web Capture](https://github.com/MarkrPearce96/Web-Capture), a Safari full-page screenshot and annotation extension.
