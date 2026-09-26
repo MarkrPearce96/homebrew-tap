@@ -13,12 +13,23 @@ cask "polytype" do
 
   app "Polytype.app"
 
-  zap trash: [
-  "~/Library/Preferences/com.polytype.bar.plist",
-  "~/Library/Preferences/PolytypeBar.plist",
-  "~/Library/HTTPStorages/com.polytype.bar/",
-  "~/Library/Caches/com.polytype.bar/",
-  ]
+  # `defaults delete` (not just trashing the plist) matters here: cfprefsd
+  # caches a preference domain in memory, so deleting the file alone can
+  # leave a reinstalled copy of the app reading (or even rewriting) the old
+  # cached values — including `setupCompleted`, which then skips first-run
+  # setup on a supposedly-fresh install. `defaults delete` goes through
+  # cfprefsd itself, so the cache is actually cleared, not just the file.
+  zap script: {
+        executable: "/bin/sh",
+        args:       ["-c",
+                     "defaults delete com.polytype.bar 2>/dev/null; defaults delete PolytypeBar 2>/dev/null; true"],
+      },
+      trash:  [
+        "~/Library/Caches/com.polytype.bar/",
+        "~/Library/HTTPStorages/com.polytype.bar/",
+        "~/Library/Preferences/com.polytype.bar.plist",
+        "~/Library/Preferences/PolytypeBar.plist",
+      ]
 
   caveats <<~EOS
     Polytype is signed with a personal Apple Development certificate but
