@@ -1,6 +1,6 @@
 cask "polytype" do
-  version "1.1.1"
-  sha256 "f24ff5979d3125296588878ed8cef60545d7157ab81c135094d722fa1a0c91fe"
+  version "1.1.2"
+  sha256 "0c482a9437eb326cbb3617289b73ddd40e23b7822dd2b94252bf8f9ffefe4982"
 
   url "https://github.com/MarkrPearce96/Polytype/releases/download/v#{version}/Polytype.zip"
   name "Polytype"
