@@ -13,7 +13,12 @@ cask "polytype" do
 
   app "Polytype.app"
 
-  zap trash: "~/Library/Preferences/com.polytype.bar.plist"
+  zap trash: [
+  "~/Library/Preferences/com.polytype.bar.plist",
+  "~/Library/Preferences/PolytypeBar.plist",
+  "~/Library/HTTPStorages/com.polytype.bar/",
+  "~/Library/Caches/com.polytype.bar/",
+  ]
 
   caveats <<~EOS
     Polytype is signed with a personal Apple Development certificate but
